@@ -1,3 +1,5 @@
+
+// Countries API to fetch data using promise and xmlHttpRequest object
 function countriesApi(url) {
   return new Promise((res, rej) => {
     let xhr = new XMLHttpRequest();
@@ -23,7 +25,7 @@ countriesApi(url)
   .catch((err) => console.error(err));
 
 
-// DOM 
+//*********************************************************************DOM ******************************************************
 //Creates individual Card
 function createCard(countryObj) {
   const card = createDomElement("div", "card");

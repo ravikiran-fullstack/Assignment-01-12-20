@@ -67,3 +67,53 @@ body{
 .short-title{
   font-size: 13px;
 }
+
+/* On screens that are 600px or less */
+@media screen and (max-width: 600px) {
+  .card{
+    width: 49%;
+  }
+
+  .card-title{
+    margin-bottom: 0.3rem !important;
+    font-size: 15px;
+  }
+
+  .card-contents p span{
+    margin-left: 10px;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .card-contents p{
+    font-size: 10px;
+  }
+
+  .card-contents{
+    padding: 5px;
+  }
+
+  .short-title{
+    font-size: 10px;
+  }
+}
+
+/* On screens that are 800px or less And orientation is landscape */
+@media only screen and (orientation: landscape) and (max-width: 900px) {
+  .card{
+    width: 32%;
+  }
+  .card-contents p span{
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .card-contents p{
+    font-size: 12px;
+  }
+
+  .card-contents{
+    padding: 10px;
+  }
+}

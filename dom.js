@@ -4,7 +4,7 @@ function createCard(countryObj) {
     const cardBody = createDomElement("div", "card-body");
       // If the name of the country is too long change the font size
       const cardTitle = createDomElement("h5", "card-title");
-      if (countryObj.name.length > 20) {
+      if (countryObj.name.length > 15) {
         cardTitle.classList.add("short-title");
       }
       cardTitle.innerHTML = countryObj.name;

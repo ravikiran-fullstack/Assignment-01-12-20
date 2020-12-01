@@ -18,6 +18,7 @@ function countriesApi(url) {
 }
 
 let url = "https://restcountries.eu/rest/v2/all";
+// Call countriesApi to get countries data
 countriesApi(url)
   .then((response) => {
     generateHtml(JSON.parse(response));

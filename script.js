@@ -1,9 +1,10 @@
 
 // Countries API to fetch data using promise and xmlHttpRequest object
-function countriesApi(url) {
+function customFetchApi(url, config = { method: 'GET'}) {
   return new Promise((res, rej) => {
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
+    let method = config.method;
+    xhr.open(method, url, true);
 
     xhr.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
@@ -18,8 +19,11 @@ function countriesApi(url) {
 }
 
 let url = "https://restcountries.eu/rest/v2/all";
+let config = {
+  method: 'GET'
+}
 // Call countriesApi to get countries data
-countriesApi(url)
+customFetchApi(url, config)
   .then((response) => {
     generateHtml(JSON.parse(response));
   })
